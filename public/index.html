@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html ng-app="contactApp">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+<script src="contactCtrl.js"></script>
+<div ng-controller="contactCtrl">
+<title>hello</title></head>
+<input type="text" ng-model="contact.name"></input>
+<input type="text"  ng-model="contact.contact"></input>
+<input type="button" ng-click = "addperson()">Add</input>
+<input type="button" ng-click = "updateperson()">Update</input>
+<ul >
+	<li ng-repeat="person in persons">
+		{{person.name+ " " + person.contact}}
+		<input type="button" ng-click = "delperson(person._id)">Delete</input>
+		<input type="button" ng-click = "editperson(person._id)">Edit</input>
+	</li>
+</ul>
+</div>		
+</html>
